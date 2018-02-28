@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div class="row">
+<div class="col">
+    <h3>Get information</h3>
+    <a href="/get-data-reservation">LOAD DATA</a>
+    <div>
+        {{# each item }}
+            <article class="item">
+                <div>nom: {{ this.name }}</div>
+                <div>phone: {{ this.phone }}</div>
+                <div>nbr_places: {{ this.nbr_places }}</div>
+                <div>temps: {{ this.temps }}</div>
+                <div>commantaire: {{ this.commantaire }}</div>
+                <div>ID: {{ this._id }}</div>
+            </article>
+        {{/each}}
+    </div>
+</div>
+
+<div class="col">
+    <h3>Delete reservation</h3>
+    <form action="/delete-reservation" method="post">
+        <div class="input">
+            <label for="id">ID</label>
+            <input type="text"  class="form-control" id="id" name="id">
+        </div>
+        <button type="submit" class="btn btn-outline-info">DELETE</button>
+    </form>
+</div>
+</div>
+
+
+</body>
+</html>

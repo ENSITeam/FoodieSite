@@ -1,0 +1,89 @@
+body { 
+  background-image: url("imaage.jpg");
+      min-height: 500px;
+    /* Set background image to fixed (don't scroll along with the page) */
+    background-attachment: fixed;
+    /* Center the background image */
+    background-position: center;
+    /* Set the background image to no repeat */
+    background-repeat: no-repeat;
+    /* Scale the background image to be as large as possible */
+    background-size: cover;
+  padding: -20px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0; height: 100%; overflow-x: hidden;
+}
+#onglet{
+   padding-left:2%;
+   padding-top: 1%;
+   padding-right:22%;
+   align-items: center;
+}
+
+a {
+  color: #35b3c6;
+}
+.row{
+   padding: 3%;
+}
+.col {
+  background-color: rgba(190,190,190,0.7);
+  padding: 3%;
+  margin: 2%;
+  border-radius: 25px;
+}
+
+.col:first-of-type {
+  margin-left: 0;
+}
+
+.col:last-of-type {
+  margin-right: 0;
+}
+
+.col h3 {
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+  color: #17a2b8 ;
+}
+label {
+   color: white;
+}
+
+.input label {
+  display: block;
+  font-weight: bold;
+  padding: 2px 0;
+}
+
+.logout{
+
+ float: right;
+ margin-top:1px;
+ margin-right:10px;"
+}
+
+input,
+button {
+  font: inherit;
+}
+
+button {
+  margin-top: 10px;
+  border: none;
+  box-shadow: 1px 1px 1px #34495e;
+  border-radius: 0;
+  background: #ecf0f1;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #bdc3c7;
+}
+
+.item {
+  margin: 10px 0;
+  padding: 5px;
+  background: #95a5a6;
+  border: 1px solid black;
+}

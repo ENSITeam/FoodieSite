@@ -1,0 +1,123 @@
+
+<nav class="navbar navbar-dark bg-dark">
+<span class="navbar-brand mb-0 h1">Restaurant {{name}}</span>
+   <div style="float: right;" style="border: 2px solid black;">
+       <form action="/logout" method="get">
+           <button type="submit" class="btn btn-outline-info" >logout</button>
+       </form>
+   </div>
+
+</nav>
+
+<form action="/choix" method="post" id="onglet">
+
+    <button type="submit" name="button" class="btn btn-outline-info" value="pizza">Pizza</button>
+    &nbsp;
+    &nbsp;
+
+    <button type="submit" name="button" class="btn btn-outline-info" value="boison">Boison</button>
+    &nbsp;
+&nbsp;
+
+    <button type="submit" name="button" class="btn btn-outline-info" value="sandwich">Sandwich</button>
+    &nbsp;
+&nbsp;
+
+    <button type="submit" name="button" class="btn btn-outline-info" value="Crepe">Crepe</button>
+    &nbsp;
+&nbsp;
+
+
+    <button type="submit" name="button" class="btn btn-outline-info" value="Gaufre">Gaufre</button>
+    &nbsp;
+&nbsp;
+
+    <button type="submit"  name="button" class="btn btn-outline-info" value="PetitDej">PetitDej</button>
+    &nbsp;
+&nbsp;
+
+    <button type="submit"  name="button" class="btn btn-outline-info" value="reservaton">Reservation</button>
+
+</form>
+
+
+
+<div class="row">
+
+   <div class="col">
+   <h3>Insert Menu</h3>
+       <form action="/insert" method="post">
+
+           <div class="form-group">
+               <label for="title">Nom</label>
+               <input type="text" class="form-control" id="title" name="title">
+           </div>
+           <div class="form-group">
+               <label for="content">Ingrediant</label>
+               <input type="text" class="form-control" id="content" name="content">
+           </div>
+           <div class="form-group">
+               <label for="author">Prix</label>
+               <input type="text" class="form-control" id="author" name="author">
+           </div>
+           <div class="form-group">
+               <label for="image">Image</label>
+               <input type="text" class="form-control" id="image" name="image">
+           </div>
+           <button type="submit" class="btn btn-outline-info">INSERT</button>
+       </form>
+   </div>
+   <div class="col">
+       <h3>Get Information</h3>
+       <a href="/get-data">Load Data</a>
+       <div>
+           {{# each items }}
+               <article class="item">
+                   <div>Nom: {{ this.title }}</div>
+                   <div>Ingerdiant: {{ this.content }}</div>
+                   <div>Prix: {{ this.author }}</div>
+                   <div>Image: {{ this.image }}</div>
+                   <div>ID: {{ this._id }}</div>
+               </article>
+           {{/each}}
+       </div>
+   </div>
+   <div class="col">
+       <h3>Update menu</h3>
+       <form action="/update" method="post">
+           <div class="form-group">
+               <label for="id">ID</label>
+               <input type="text" class="form-control" id="id" name="id">
+           </div>
+           <div class="form-group">
+               <label for="title">Nom</label>
+               <input type="text" class="form-control" id="title" name="title">
+           </div>
+           <div class="form-group">
+               <label for="content">Ingrediant</label>
+               <input type="text" class="form-control" id="content" name="content">
+           </div>
+           <div class="form-group">
+               <label for="author">Prix</label>
+               <input type="text" class="form-control" id="author" name="author">
+           </div>
+           <div class="form-group">
+               <label for="image">Image</label>
+               <input type="text" class="form-control" id="image" name="image">
+           </div>
+           <button type="submit" class="btn btn-outline-info">UPDATE</button>
+       </form>
+   </div>
+   </div>
+   <div class="col">
+       <h3>DELETE MENU</h3>
+       <form action="/delete" method="post">
+           <div class="form-group">
+               <label for="id">ID</label>
+               <input type="text" class="form-control" id="id" name="id">
+           </div>
+           <button type="submit" class="btn btn-outline-info">DELETE</button>
+       </form>
+   </div>
+
+
